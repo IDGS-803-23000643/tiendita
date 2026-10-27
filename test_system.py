@@ -15,4 +15,4 @@ def test_sistema_flujo_compra_exitoso():
 def test_sistema_flujo_compra_con_error():
     """Prueba de sistema manejando excepciones ante entradas incorrectas"""
     with pytest.raises(ValueError):
-        calcular_precio(-50, 10)
+        calcular_precio(500, 150)  
