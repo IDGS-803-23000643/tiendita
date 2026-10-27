@@ -5,7 +5,7 @@ def test_integracion_precio_con_iva_try():
     """Prueba de integración para flujo exitoso"""
     precio_base = 200
     descuento = 10
-    precio_con_desc = calcular_precio(precio_base, descuento) # 180
+    precio_con_desc = calcular_precio(precio_base, descuento)
     total_con_iva = calcular_iva(precio_con_desc)
     
     assert total_con_iva == pytest.approx(208.8)
