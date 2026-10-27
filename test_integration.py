@@ -9,7 +9,7 @@ def test_integracion_precio_con_iva_try():
         precio_con_desc = calcular_precio(precio_base, descuento) # 180
         total_con_iva = calcular_iva(precio_con_desc)
         
-        assert total_con_iva == 208.8
+        assert total_con_iva == pytest.approx(208.8)
     except Exception as e:
         pytest.fail(f"La prueba de integración falló inesperadamente: {e}")
 

@@ -11,7 +11,7 @@ def test_sistema_flujo_compra_exitoso():
         total_final = calcular_iva(precio_rebajado)
         
         assert precio_rebajado == 400.0
-        assert total_final == 464.0
+        assert total_final == pytest.approx(464.0)
         print("Flujo de sistema ejecutado correctamente en el bloque try.")
         
     except Exception as e:
